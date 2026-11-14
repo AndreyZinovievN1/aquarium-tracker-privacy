@@ -25,7 +25,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated"><strong>Aquarium Tracker</strong> — Last updated: November 12, 2026</p>
+<p class="updated"><strong>Aquarium Tracker</strong> — Last updated: November 14, 2026</p>
 
 <p>
     This Privacy Policy describes how <strong>Aquarium Tracker</strong> ("the app", "we", "us")
@@ -36,19 +36,24 @@
 <h2>1. Overview</h2>
 <p>
     Aquarium Tracker is a water intake tracker. It lets you log drinks, track daily
-    hydration for yourself and a pet, view statistics, set a daily reminder, and use a
-    home screen widget. The app is designed to work <strong>entirely on your device</strong>.
+    hydration for yourself and a pet, view statistics, set a daily reminder, use a
+    home screen widget, and — optionally — keep a cloud backup of your data in your own
+    Google Drive.
 </p>
 <p>
-    We do not operate servers for the app, we do not have user accounts, and we do not
-    collect, transmit, or share any personal information with anyone.
+    The app is designed to work <strong>on your device</strong>. We do not operate servers
+    for the app, we do not have user accounts of our own, and we do not collect personal
+    information for our own purposes. The only network features are optional and
+    user-initiated: an in-app purchase handled by Google Play, and a backup sync to your
+    own Google Drive that runs only if you choose to sign in with your Google account.
 </p>
 
 <h2>2. Data stored on your device</h2>
 <p>
-    The app stores the following information <strong>locally on your device only</strong>,
-    using Android's on-device storage (DataStore). This data never leaves your device
-    and is never sent to us or to any third party:
+    The app stores the following information <strong>locally on your device</strong>,
+    using Android's on-device storage (DataStore). Unless you enable the optional Drive
+    sync described in Section 4, this data never leaves your device and is never sent to
+    us or to any third party:
 </p>
 <ul>
     <li>Water intake logs, cup history, and statistics</li>
@@ -65,44 +70,81 @@
 
 <h2>3. Purchases and Google Play Billing</h2>
 <p>
-    The app offers a one-time in-app purchase ("Premium") through <strong>Google Play
-    Billing</strong>. When you make a purchase:
+    The app offers a one-time in-app purchase ("Premium") through
+    <strong>Google Play Billing</strong>. When you make a purchase:
 </p>
 <ul>
     <li>The payment is processed entirely by <strong>Google Play</strong>. We never see
         or store your payment card details, billing address, or Google account
         information.</li>
     <li>The app receives only the purchase token and entitlement status needed to
-        unlock Premium features on your device.</li>
-    <li>Purchases, refunds, and subscription management are governed by
-        <a href="https://play.google.com/about/play-terms/">Google Play's Terms of Service</a>
-        and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+        unlock Premium features on your device. Premium entitlement is verified through
+        Google Play; it is not transferable through backup files.</li>
+    <li>Purchases and refunds are governed by
+        <a href="https://play.google.com/about/play-terms/">Google Play's Terms of
+        Service</a> and <a href="https://policies.google.com/privacy">Google's Privacy
+        Policy</a>.</li>
 </ul>
 <p>
     We do not use purchase information for advertising, analytics, or any other purpose.
 </p>
 
-<h2>4. Third-party services</h2>
+<h2>4. Optional Google account sign-in and Drive backup</h2>
 <p>
-    The app uses the following third-party components, all provided by Google:
+    The app offers an <strong>optional</strong> feature that keeps a backup of your data
+    in the hidden per-app folder of <em>your own</em> Google Drive
+    (<code>appDataFolder</code>). It is entirely off until you choose to use it.
+</p>
+<p>
+    If you sign in with your Google account, the app requests only:
 </p>
 <ul>
-    <li><strong>Google Play Billing</strong> — processes in-app purchases (see Section 3).</li>
-    <li><strong>Android OS services</strong> — notifications, alarms, and app widgets are
-        handled locally by the operating system.</li>
+    <li>your basic Google profile, including your <strong>email address</strong>, which
+        is shown to you inside the app's backup settings; and</li>
+    <li>the <code>drive.appdata</code> OAuth scope — access to the app's own hidden
+        Drive folder only. This scope does <strong>not</strong> grant access to any of
+        your other Drive files, and the app never lists, reads, or modifies anything
+        outside that folder.</li>
 </ul>
 <p>
-    The app does <strong>not</strong> contain advertising, analytics SDKs, crash
-    reporting services, or any other third-party code that collects or transmits user
-    data.
+    When sync is enabled, the app uploads a single backup document
+    (<code>aquarium-backup.json</code>) containing the same data listed in Section 2, or
+    downloads a newer copy from your Drive if one exists. Sync runs when you open the
+    app or tap "Sync now". The document is stored in <em>your</em> Drive account and is
+    readable only by this app signed in as you. We operate no server that could read
+    it, and the file is invisible in your regular Drive storage.
 </p>
+<p>
+    <strong>How we use Google user data.</strong> Google account information and Drive
+    data accessed through these scopes are used <strong>only</strong> to provide the
+    backup feature you initiated:
+</p>
+<ul>
+    <li>We do not use Google user data for advertising, analytics, profiling, or any
+        purpose other than operating the backup sync for you.</li>
+    <li>We do not sell Google user data, and we do not transfer it to third parties
+        except as strictly necessary to provide the feature — that is, to Google's own
+        infrastructure (Google Sign-In, Google Drive API) acting on your behalf.</li>
+    <li>No human reads your backup data. Access tokens are obtained at runtime and are
+        managed by Google Play services; the app does not store your Google password.</li>
+    <li>You can revoke the app's access at any time from your
+        <a href="https://myaccount.google.com/permissions">Google Account permissions
+        page</a>, sign out inside the app, or delete the cloud copy from the app's
+        settings.</li>
+</ul>
 
-<h2>5. Backups</h2>
+<h2>5. Other backups</h2>
 <p>
     If you have Android Auto Backup enabled, the app's local data may be included in the
     automatic backup of your device to your own Google account. This backup is encrypted
     and controlled by you and Google; we do not initiate, access, or manage it. You can
     exclude app data from backups in your device settings.
+</p>
+<p>
+    The app can also create a <strong>backup file</strong> that you save yourself —
+    for example into cloud storage or onto another device. The file is written on your
+    device and is only transmitted if you choose to save or share it. Restoring from it
+    replaces the app's local data with the file's contents.
 </p>
 
 <h2>6. Notifications</h2>
@@ -111,35 +153,65 @@
     No notification data leaves your device, and we do not send push notifications.
 </p>
 
-<h2>7. Children's privacy</h2>
+<h2>7. Third-party services and advertising</h2>
+<p>
+    The app uses the following third-party components, all provided by Google:
+</p>
+<ul>
+    <li><strong>Google Play Billing</strong> — processes in-app purchases (see Section 3).</li>
+    <li><strong>Google Sign-In and Google Drive API</strong> — optional backup sync to
+        your own Drive's hidden app folder (see Section 4).</li>
+    <li><strong>Android OS services</strong> — notifications, alarms, and app widgets are
+        handled locally by the operating system.</li>
+</ul>
+<p>
+    The app does <strong>not</strong> contain advertising, analytics SDKs, crash
+    reporting services, or any other third-party code that collects or transmits user
+    data. We do not show ads and we do not track you.
+</p>
+
+<h2>8. Children's privacy</h2>
 <p>
     The app is not directed at children under 13 and does not knowingly collect any
-    personal information from anyone, including children. All data stays on the device.
+    personal information from anyone, including children. All app data stays on the
+    device unless the optional Drive sync described in Section 4 is enabled by an
+    adult account holder.
 </p>
 
-<h2>8. Data retention and deletion</h2>
+<h2>9. Data retention and deletion</h2>
 <p>
-    Because all data is stored locally on your device, it is retained only for as long
-    as the app is installed. Uninstalling the app or clearing its data removes all
-    locally stored information. Data included in your personal Android backups is
-    deleted according to Google's backup retention policies.
+    Local app data is retained only for as long as the app is installed. Uninstalling
+    the app or clearing its data removes all locally stored information.
 </p>
-
-<h2>9. Security</h2>
 <p>
-    All app data is stored using Android's standard on-device storage mechanisms and is
-    not transmitted over the network by the app. As the data never leaves your device,
-    there is no transmission to intercept.
+    If you used the optional Google Drive sync, the backup copy in your Drive is
+    retained until you choose "Delete cloud copy" in the app's settings or remove it
+    from your Google account. Signing out of the app does not delete that file.
+    Revoking the app's access from your Google Account permissions page stops all
+    future syncs; you can then delete the file from your Drive manually.
+</p>
+<p>
+    Data included in your personal Android backups is deleted according to Google's
+    backup retention policies.
 </p>
 
-<h2>10. Changes to this policy</h2>
+<h2>10. Security</h2>
+<p>
+    All app data is stored using Android's standard on-device storage mechanisms.
+    Network traffic is limited to the optional Google Drive backup sync described in
+    Section 4, which goes directly from your device to Google's servers over HTTPS
+    under your own account. We operate no servers and therefore hold no copies of
+    your data.
+</p>
+
+<h2>11. Changes to this policy</h2>
 <p>
     We may update this Privacy Policy from time to time. Any changes will be posted on
     this page with an updated "Last updated" date. Continued use of the app after
     changes constitutes acceptance of the updated policy.
 </p>
 
-<h2>11. Contact us</h2>
+<h2>12. Contact us</h2>
 <p>
     If you have any questions about this Privacy Policy or the app's data practices,
     please contact us at:
